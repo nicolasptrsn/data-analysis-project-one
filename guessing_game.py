@@ -39,7 +39,7 @@ def start_game():
     print("**Overall Statistics**")
     print("Mean: {}".format(mean(scores)))
     print("Median: {}".format(median(scores)))
-    print("Mean: {}".format(mode(scores)))
+    print("Mode: {}".format(mode(scores)))
 
     play_again = input("Would you like to play again? [y/n] ")
     if play_again == 'n':
