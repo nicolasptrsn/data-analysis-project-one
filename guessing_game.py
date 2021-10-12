@@ -5,7 +5,11 @@ Project 1 - Number Guessing Game
 """
 
 import random
-import statistics
+from statistics import mean
+from statistics import median
+from statistics import mode
+
+scores = []
 
 def start_game():
     # write your code inside this function.
@@ -31,6 +35,14 @@ def start_game():
         except ValueError:
             print("You must choose a number between 1 and 100. Try again!")
     print("Well done {}! You guessed it in {} tries!".format(name, total_guesses))
+    
+    scores.append(total_guesses)
+    print("**Overall Statistics**")
+    print("Mean: {}".format(mean(scores)))
+    print("Median: {}".format(median(scores)))
+    print("Mean: {}".format(mode(scores)))
+
+
     play_again = input("Would you like to play again? [y/n] ")
     if play_again == 'n':
         print("Thanks for playing. Have a great day!")
@@ -40,7 +52,6 @@ def start_game():
     
 # TODO Save their attempt number to a list.
 # TODO At the end of the game, show the player, 1) their number of attempts, 2) the mean, median, and mode of the saved attempts list.
-# TODO Ask the player if they want to play again. - The game only replays once, how can I fix this?
     
 # Kick off the program by calling the start_game function.
 start_game()
