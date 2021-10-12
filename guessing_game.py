@@ -10,7 +10,6 @@ from statistics import median
 from statistics import mode
 
 scores = []
-
 def start_game():
     # write your code inside this function.
     answer = random.randint(1, 100)
@@ -42,16 +41,10 @@ def start_game():
     print("Median: {}".format(median(scores)))
     print("Mean: {}".format(mode(scores)))
 
-
     play_again = input("Would you like to play again? [y/n] ")
     if play_again == 'n':
         print("Thanks for playing. Have a great day!")
     else:
         start_game()
-  
-    
-# TODO Save their attempt number to a list.
-# TODO At the end of the game, show the player, 1) their number of attempts, 2) the mean, median, and mode of the saved attempts list.
-    
-# Kick off the program by calling the start_game function.
+      # Kick off the program by calling the start_game function.
 start_game()
